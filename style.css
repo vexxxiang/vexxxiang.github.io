@@ -1,0 +1,276 @@
+html{
+    --DB: #2b2d42;
+    --LB: #8d99ae;
+    --W: #edf2f4;
+    --LR: #ef233c;
+    --DR: #b3011e;
+}
+body{
+    background-color: var(--DB);
+}
+*{
+    box-sizing: none;
+    padding:0;
+    margin:0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    
+    background-repeat: no-repeat;
+    background-color: var(--DB);
+    display:flex;
+}
+/* ----------------------------- */
+/* --------- LEFT SIDE --------- */
+/* ----------------------------- */
+.leftPanel
+{
+    width: 30%;
+    height:100vh;
+    background-color: var(--W);
+    color: var(--DB);
+
+}
+/*
+.leftPanel::before{
+    content: "";
+    position: absolute;
+    left:30%;
+    background-color: var(--W);
+    line-height: 200%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: var(--DB);
+    cursor: pointer;
+    width: 2%;
+    height: 4%;
+
+}
+*/
+model-viewer{
+    width: 100%;
+    height: 100%;
+}
+#modelView{
+    height:40%;
+    width: 100%;
+    background-color: var(--LB); 
+}
+#view{
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease-in-out;
+}
+.text{
+    width: 90%;
+    height: 50%;
+    padding: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2vh;
+    
+}
+.text h1{
+    white-space: nowrap;
+    width: min-content;
+    margin-bottom: 5%;
+
+}
+.text p{
+    overflow-y: scroll;
+    height:90%;
+    line-height: 1.15;
+    
+}
+/* ----------------------------- */
+/* ------------ MAP ------------ */
+/* ----------------------------- */
+.ImageBG{
+    
+    background-image: url('img/churchBG.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+.map{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    transform: scale(0.01);
+    transition: 0.5s all ease-in-out;
+
+}
+._map_animate{
+    transform: scale(1) !important;
+}
+/* ----------------------------- */
+/* -------- SELECTPANEL -------- */
+/* ----------------------------- */
+.selectPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color:white;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:1%;
+    font-size:4vw;
+}
+.selectPanel ion-icon{
+    cursor: pointer;
+}
+
+.st0{fill:var(--W);}
+.st1{fill:var(--LR);}
+.st2{fill:var(--LB);}
+.st3{fill:var(--W);}
+.st4{fill:var(--DB);}
+
+#RadomskoWielkie:hover{
+    fill:var(--DR);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    
+}
+#Przedborz:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Wielgomlyny:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Maslowice:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Kodrab:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Kamiensk:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Ladzice:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#LgotaW:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Gomunice:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Dobryszyce:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Zytno:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#Gidle:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#RadomskoMniejsze:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#KobieleWielkie:hover{
+    fill:var(--DB);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+#ScaledMap{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    transform:scale(100%);
+    
+
+    
+}
+.hidden{display: none;
+transform: scale(0);}
+#scaled{
+    width: 80%;
+    height:80%;
+    margin:0 auto;
+    
+}
+#Pin{
+    position: absolute;
+    width: 5%;
+    margin:0 auto;
+    cursor:pointer;
+ 
+}
+
+#Pin:hover{
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+
+
+}  
+.Pin1{
+    left:50%;
+    top:50%;
+}
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 90%, 100% {-webkit-transform: translateY(0);}	
+    40% {-webkit-transform: translateY(-15px);}
+    65% {-webkit-transform: translateY(-7.5px);}
+}
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 90%, 100% {-moz-transform: translateY(0);}
+    40% {-moz-transform: translateY(-15px);}
+    65% {-moz-transform: translateY(-7.5px);}
+}
+
+@-o-keyframes bounce {
+    0%, 20%, 50%, 90%, 100% {-o-transform: translateY(0);}
+    40% {-o-transform: translateY(-15px);}
+    65% {-o-transform: translateY(-7.5px);}
+}
+@keyframes bounce {
+    0%, 20%, 50%, 90%, 100% {transform: translateY(0);}
+    40% {transform: ttranslateY(-15px);}
+    65% {transform: translateY(-7.5px);}
+}
